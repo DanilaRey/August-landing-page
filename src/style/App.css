@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    /* list-style-type: none; */
+    text-decoration: none;
 }
 .main {
     overflow-x:hidden;  /*для горизонтального*/
@@ -62,7 +64,7 @@
 .links__text h1 {
     font-family: 'Raleway', sans-serif;
     color: #fff;
-    font-size: 82px;
+    font-size: 78px;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 0;
@@ -75,7 +77,6 @@
     line-height: 30px;
     margin: 0 auto;
     margin-bottom: 60px;
-    width: 700px;
 }
 .btn__custom {
     font-family: 'Raleway', sans-serif;
@@ -207,7 +208,7 @@
 .about__choose {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+
 }
 
 
@@ -255,7 +256,6 @@
 
 .gallary__section {
     padding: 100px 0;
-    background: #f6f6f6;
     text-align: center;
 }
 .gallary__title {
@@ -333,7 +333,7 @@
 /* clients__section */
 
 .clients__section {
-
+    background: #f6f6f6;
 }
 
 .clients__main {
@@ -386,4 +386,236 @@
     font-size: 15px;
     font-weight: 600;
     color: #666;
+}
+
+
+/* team__section */
+.team__section {
+    padding: 100px 0;
+}
+
+.team__main {
+    text-align: center;
+}
+
+.team__title {
+    margin-bottom: 80px;
+}
+.team__item {}
+
+.team__title h2 {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 36px;
+    color: #333;
+}
+
+.team__title p {
+    line-height: 24px;
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #777;
+}
+.team__title h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px;
+    height: 4px;
+    width: 60px;
+    background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+}
+
+.caption{
+    padding: 10px 0;
+    color: #888;
+}
+
+.caption h4 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* contatct__section */
+.contact__secton {
+    padding: 100px 0 60px 0;
+    background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+    color: rgba(255,255,255,.75);
+}
+.contact__title {
+    margin-bottom: 50px;
+}
+.contact__title h2 {
+    position: relative;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.contact__title h2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 60px;
+    background: rgba(255,255,255,.3);
+    bottom: 0;
+    left: 0;
+}
+
+.contact__title p {
+    font-size: 16px;    
+    margin: 0 0 10px;
+}
+
+.contact__input {
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.form__element {
+    border-radius: 0% !important;
+}
+.contact__btn {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 30px 0;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 14px 34px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.5s linear;
+}
+.contact__btn:hover {
+    color: rgb(0, 0, 0);
+    background: #fff;
+}
+
+.contact__info {
+    padding-top: 5%;
+    margin-left: 8.33333333%;
+}
+.contact__item  {
+    margin: 20px 0;
+}
+.contact__item h3 {
+    color: #fff;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact__icon {
+    margin-right: 10px;
+}
+.contact__social {
+    position: relative;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 50px !important;
+    margin-top: 50px !important;
+    text-align: center;
+}
+.contact__social ul {
+    display: flex;
+    justify-content: center;
+}
+.contact__social ul li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.contact__social-icon {
+    font-size: 22px;
+    width: 48px;
+    height: 48px;
+    padding: 12px 0;
+    border-radius: 50%;
+    color: #fff;
+    border: 2px solid white;
+}
+
+/* footer__section */
+
+.footer__section {
+    text-align: center;
+}
+.footer__section p {
+    margin: 20px 0;
+    padding: 10px 0;
+    color: #888;
+    font-size: 14px;
+}
+.footer__section a {
+    text-decoration: none;
+}
+
+
+/* @MEDIA */
+@media (max-width: 1199px){
+    .about__img{
+        width: 460px;
+    }
+    .team__img {
+        width: 230px;
+    }
+}
+
+@media (max-width: 991px){
+    .team__img {
+        width: 170px;
+    }
+    .about__img {
+        width: 590px;
+    }
+    .about__main {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__text__section {
+        padding-top: 20px;  
+        width: 100% !important;
+    }
+}
+@media (max-width: 767px){
+    .team__img {
+        width: 230px;
+    }
+    .about__text__section {
+        padding-top: 20px;
+    }
+    .about__img {
+        width: 480px;
+    }
+    .form__element {
+        margin-top: 8px;
+    }
+}
+
+
+@media (max-width: 510px){
+    .about__img {
+        width: 100%;
+    }
+    #logo {
+        font-size: 20px;
+    }
+    .links__text h1 {
+        font-size: 64px;
+    }
+    .links__text p {
+        font-size: 20px;
+    }
+    .about__list {
+        font-size: 14px;
+    }
 }
