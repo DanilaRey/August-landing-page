@@ -18,7 +18,20 @@
     font-weight: 400;
     padding: 8px 2px;
     border-radius: 0;
-    margin: 0px 15px 0 20px;
+    margin: 0px 15px 0 15px;
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    padding-right: 0;
+}
+.modal-open {
+    overflow: scroll !important;
+    padding-right: 0% !important;
 }
 #logo {
     font-size: 24px;
@@ -44,6 +57,9 @@
     font-weight: 400;
     height: 72px;
 }
+
+
+/* links__section  */
 .links__section {
     display: table;
     background: url(../img/links.jpg)  center center no-repeat;
@@ -51,6 +67,8 @@
     width: 100%;
     background-size: cover;    
 }
+
+
 .overlay {
     background: rgba(0,0,0,0.2);
 }
@@ -567,6 +585,15 @@
     }
     .team__img {
         width: 230px;
+    }
+    #responsive-navbar-nav .nav__links{
+        font-size: 12px;
+    }
+    #logo {
+        font-size: 20px;
+    }
+    .myBtnOffc {
+        font-size: 12px;
     }
 }
 

@@ -1,13 +1,14 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React, { useState } from 'react'
+import {Col, Container, Row } from 'react-bootstrap'
 import { BsFillChatDotsFill, BsFillBrushFill, BsFillPersonFill, BsFillShieldFill, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { AiFillApple, AiFillEuroCircle, AiFillBank, AiFillWechat, AiFillPropertySafety, AiFillYuque,AiFillPhone, AiTwotoneMail} from "react-icons/ai";
 import {ImFacebook, ImLocation2 } from "react-icons/im";
 import Form from 'react-bootstrap/Form';
-
+import MyModal from './UI/ModalWindow/MyModal';
 
 
 const MainContent = () => {
+    const [modalShow, setModalShow] = useState(false)
   return (
     <div className='main'>
         <div className='links__section'>
@@ -17,13 +18,19 @@ const MainContent = () => {
                     <Col className='links__text' md={12} >
                         <h1>WE ARE A<br/> LANDING PAGE</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.</p>
-                        <a className='btn__custom' href='/'>LEARN MORE</a>
+                        <button className='btn__custom' variant='primary' onClick={() => setModalShow(true)}>
+                            LEARN MORE
+                        </button>
+                        <MyModal
+                            show={modalShow}
+                            onHide={() => setModalShow(false)}
+                        />
                     </Col>
                 </Row>
             </Container>
             </div>
         </div>
-        <div className='features'>
+        <div className='features' id='home'>
             <Container>
                 <div className='features__title'>
                     <h2>Features</h2>
@@ -52,7 +59,7 @@ const MainContent = () => {
                 </Row>
             </Container>
         </div>
-        <div className='about__section'>
+        <div className='about__section' id="about">
             <Container>
                 <Row className='about__main'>
                     <Col xs={12} md={6} >
@@ -86,7 +93,7 @@ const MainContent = () => {
                 </Row>
             </Container>
         </div>
-        <div className='services__section'>
+        <div className='services__section' id='services'>
             <Container>
                 <div className='services__title'>
                     <h2>OUR SERVICES</h2>
@@ -140,7 +147,7 @@ const MainContent = () => {
                 </div>
             </Container>
         </div>
-        <div className='gallary__section'>
+        <div className='gallary__section' id='gallary'>
             <Container>
                 <div className='gallary__title'>
                     <h2>GALLERY</h2>
@@ -233,7 +240,7 @@ const MainContent = () => {
                 </div>             
             </Container>
         </div>
-        <div className='clients__section'>
+        <div className='clients__section' id='clients'>
             <Container>
             <div className='clients__main'>
                 <div className='clients__title'>
@@ -310,7 +317,7 @@ const MainContent = () => {
             </div>
             </Container>
         </div>
-        <div className='team__section'>
+        <div className='team__section' id='team'>
             <Container>
                 <div className='team__main'>
                     <div className='team__title'>
@@ -358,7 +365,7 @@ const MainContent = () => {
                 </div>
             </Container>
         </div>
-        <div className='contact__secton'>
+        <div className='contact__secton' id='contact'>
             <Container>
                 <div className='contact__main'>
                 <Row>
